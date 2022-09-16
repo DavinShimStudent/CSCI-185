@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 100vh;
+}
+
+main{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas:
+        "s1 s1 s2"
+        "s3 s4 s2"
+        "s3 s5 s5"
+}
+#s1{grid-area: s1;}
+#s2{grid-area: s2;}
+#s3{grid-area: s3;}
+#s4{grid-area: s4;}
+#s5{grid-area: s5;}
+
+section {
+    border: solid 4px orangered;
+}
