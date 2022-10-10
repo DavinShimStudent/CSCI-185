@@ -15,9 +15,10 @@ function check() {
     if(userGuess < secret)
     {document.querySelector('#message').innerHTML = "too low";}
     if(userGuess > secret)
-    {document.querySelector('message').innerHTML = "too high";}
+    {document.querySelector('#message').innerHTML = "too high";}
     if(userGuess == secret){
         document.querySelector('#celebrate').className = "";
+        document.querySelector('#message').innerHTML = " ";
         document.querySelector('#num-guesses').innerHTML = "you got in " + clickCount + " guesse(s)";
     }
 
