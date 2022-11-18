@@ -1,3 +1,5 @@
+
+
 function setup() {
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight; 
@@ -12,9 +14,13 @@ function setup() {
     drawCreature(454, 423, 141, '#aebb83', '#227876');
      drawCreature(333, 227, 99, '#94ba77', '#3f5364');
     drawCreature(117, 314, 21, '#afc272', '3f5364');
-    
+
     drawGrid(canvasWidth, canvasHeight);
+
+
 }
+
+
 
 function heart(x, y, size){
 beginShape();
@@ -36,3 +42,20 @@ function drawCreature(positionX, positionY, size, primaryColor, secondaryColor) 
 
     line(positionX-size*4/24, positionY+size/1.7, positionX+size*4/24, positionY+size/1.7)
 }
+
+function makeCloud(cloudx, cloudy) {
+    fill('hotpink')
+    noStroke();
+    ellipse(cloudx, cloudy, 70, 50);
+    ellipse(cloudx + 10, cloudy + 10, 70, 50);
+    ellipse(cloudx - 20, cloudy + 10, 70, 50);
+  } 
+  function landscape() {
+    
+    for (let i = 0; i < 8; i++) {
+        const x = Math.random() * canvasWidth;
+        const y = Math.random() * canvasHeight;   
+        makeCloud(x, y);
+    }
+}
+
