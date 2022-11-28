@@ -23,11 +23,19 @@ function draw(){
      drawCreature(333, 227, 99, '#94ba77', '#3f5364');
     drawCreature(117, 314, 21, '#afc272', '3f5364');
     landscape();
+    platform(40, 300, 50);
     drawGrid(canvasWidth, canvasHeight);
+
 
 };
 
 
+function platform(leftX, rightX, y){
+    fill('green');
+    rect(leftX, y, rightX-leftX, (rightX-leftX)/16);
+    fill('#3B2521')
+    rect(leftX+(rightX-leftX)/16, y+(rightX-leftX)/16, (rightX-leftX)-(rightX-leftX)/8, (rightX-leftX)/16)
+}
 
 function heart(x, y, size){
 beginShape();
