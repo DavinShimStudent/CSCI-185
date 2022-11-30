@@ -25,6 +25,7 @@ function draw(){
     landscape();
     platform(40, 300, 50);
     drawGrid(canvasWidth, canvasHeight);
+    createNumbers(500, 500, 0);
 
 
 };
@@ -75,5 +76,110 @@ function makeCloud(cloudx, cloudy) {
     makeCloud(630, 210);
     makeCloud(403, 123);
     makeCloud(230, 370);
+}
+
+//draws numbers zero through 10
+function createNumbers(x, y, life){
+
+    if(life == 10){
+    fill('black');
+    rect(x, y, 5, 50);
+    fill('black');
+    rect(x+20, y, 25, 50);
+    fill('white');
+    rect(x+24, y+4, 17, 42);}
+    if(life==9){
+    fill('black');
+    rect(x+20, y, 25, 25);
+    fill('white');
+    rect(x+24, y+4, 17, 17);
+    fill('black');
+    rect(x+24+17+4, y, 4, 50);
+    }
+    if(life==8){
+        fill('black');
+        rect(x+20, y, 25, 25);
+        fill('white');
+        rect(x+24, y+4, 17, 17);
+        fill('black');
+        rect(x+20, y+25, 25, 25);
+        fill('white');
+        rect(x+24, y+4+25, 17, 17);
+
+    }
+    if(life==7){
+        fill('black');
+        rect(x+20, y, 25, 5);
+
+        fill('black');
+        rect(x+24+17+4, y, 4, 50);
+    }
+    if(life==6){
+        fill('black');
+        rect(x+20, y, 25, 5);
+        fill('black');
+        rect(x+20, y, 4, 50);
+        fill('black');
+        rect(x+20, y+50-5, 25, 5);
+        fill('black');
+        rect(x+20, y+25, 25, 5);
+        fill('black');
+        rect(x+24+17+4, y+25, 4, 25);
+    }
+    if(life==5){
+        fill('black');
+        rect(x+20, y, 30, 5);
+        fill('black');
+        rect(x+20, y, 4, 25);
+        fill('black');
+        rect(x+20, y+50-5, 25, 5);
+        fill('black');
+        rect(x+20, y+25, 25, 5);
+        fill('black');
+        rect(x+24+17+4, y+25, 4, 25);
+    }
+    if(life==4){
+        fill('black');
+        rect(x+20, y, 4, 25);
+
+        fill('black');
+        rect(x+20, y+25, 25, 5);
+        fill('black');
+        rect(x+24+17+4, y, 4, 50);
+    }
+    if(life==3){
+
+
+        fill('black');
+        rect(x+20, y+25, 25, 5);
+        fill('black');
+        rect(x+24+17+4, y, 4, 50);
+        fill('black');
+        rect(x+20, y, 25, 5);
+        fill('black');
+        rect(x+20, y+45, 25, 5);
+    }
+    if(life==2){
+        fill('black');
+        rect(x+20, y, 30, 5);
+        fill('black');
+        rect(x+20, y+25, 4, 25);
+        fill('black');
+        rect(x+20, y+50-5, 29, 5);
+        fill('black');
+        rect(x+20, y+25, 29, 5);
+        fill('black');
+        rect(x+24+17+4, y, 4, 25);
+    }
+    if(life==1){
+        fill('black');
+        rect(x+20, y, 5, 50);
+    }
+    if(life==0){
+        fill('black');
+        rect(x+20, y, 25, 50);
+        fill('white');
+        rect(x+24, y+4, 17, 42);
+    }
 }
 
